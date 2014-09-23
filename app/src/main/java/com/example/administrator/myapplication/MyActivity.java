@@ -2,9 +2,6 @@ package com.example.administrator.myapplication;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
@@ -54,7 +51,7 @@ public class MyActivity extends Activity {
 		mTracker1 = AnimationTracker.newTracker();
 
 		Animation animation4 = new TranslateAnimation(0f, 0f, 0f, 700);
-		animation.setDuration(500);
+		animation4.setDuration(500);
 		Animation animation5 = new TranslateAnimation(0f, 0f, 700f, -200);
 		animation5.setDuration(500);
 
@@ -62,8 +59,8 @@ public class MyActivity extends Activity {
 		animation6.setDuration(700);
 		Animation animation7 = new TranslateAnimation(0f, 0f, 900f, -200);
 		animation7.setDuration(700);
-		mTracker1.addViewEntry(new AnimationTracker.Entry(mImg1, animation4, animation5));
-		mTracker1.addViewEntry(new AnimationTracker.Entry(mImg1_1, animation6, animation7));
+		mTracker1.addViewEntry(new AnimationTracker.Entry(mImg1, animation4, animation5))
+				.addViewEntry(new AnimationTracker.Entry(mImg1_1, animation6, animation7));
 
 		mImg2 = (TextView) findViewById(R.id.img2);
 		mImg3 = (TextView) findViewById(R.id.img3);
